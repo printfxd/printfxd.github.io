@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+    
+    <!-- SEO meta tags -->
+    <title>Table's Show | ICÔNE 餐桌系列</title>
+    <meta name="description" content="Around - Multipurpose Bootstrap HTML Template">
+    <meta name="keywords" content="bootstrap, business, corporate, coworking space, services, creative agency, dashboard, e-commerce, mobile app showcase, saas, multipurpose, product landing, shop, software, ui kit, web studio, landing, light and dark mode, html5, css3, javascript, gallery, slider, touch, creative">
+    <meta name="author" content="Createx Studio">
+
+    <!-- Webmanifest + Favicon / App icons -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" href="assets/img/landing/creative-agency-ming/banner/tableshow-001.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="assets/img/landing/creative-agency-ming/banner/tableshow-001.png">
+        
+    <!-- Theme switcher (color modes) -->
+    <script src="assets/js/theme-switcher.js"></script>
+
+    <!-- Import Google font (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" id="google-font">
+
+    <!-- Vendor styles -->
+    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css">
+
+    <!-- Font icons -->
+    <link rel="stylesheet" href="assets/icons/around-icons.min.css">
+
+    <!-- Theme styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      [data-bs-theme="dark"] .page-loading {
+        background-color: #121519;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-family: "Inter", sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #6f788b;
+      }
+      [data-bs-theme="dark"] .page-loading-inner > span {
+        color: #fff;
+        opacity: .6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        background-color: #d7dde2; 
+        border-radius: 50%;
+        opacity: 0;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      [data-bs-theme="dark"] .page-spinner {
+        background-color: rgba(255,255,255,.25);
+      }
+      @-webkit-keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+      @keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+    </style>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading')
+          preloader.classList.remove('active')
+          setTimeout(function () {
+            preloader.remove()
+          }, 1500)
+        }
+      })()
+    </script>
+  </head>
+
+
+  <!-- Body -->
+  <body>
+
+
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div>
+        <span>資料載入中，請稍後...</span>
+      </div>
+    </div>
+
+
+    <!-- Page wrapper -->
+    <main class="page-wrapper">
+
+      <!-- Navbar. Remove 'fixed-top' class to make the navigation bar scrollable with the page -->
+      <header class="navbar navbar-expand-lg fixed-top bg-light">
+        <div class="container">
+
+          <!-- Navbar brand (Logo) -->
+          <a class="navbar-brand pe-sm-3" href="landing-shop-v1-ming.html">
+            <span class="text-primary flex-shrink-0 me-2">
+              <!--
+              <svg width="35" height="32" viewBox="0 0 36 33" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor" d="M35.6,29c-1.1,3.4-5.4,4.4-7.9,1.9c-2.3-2.2-6.1-3.7-9.4-3.7c-3.1,0-7.5,1.8-10,4.1c-2.2,2-5.8,1.5-7.3-1.1c-1-1.8-1.2-4.1,0-6.2l0.6-1.1l0,0c0.6-0.7,4.4-5.2,12.5-5.7c0.5,1.8,2,3.1,3.9,3.1c2.2,0,4.1-1.9,4.1-4.2s-1.8-4.2-4.1-4.2c-2,0-3.6,1.4-4,3.3H7.7c-0.8,0-1.3-0.9-0.9-1.6l5.6-9.8c2.5-4.5,8.8-4.5,11.3,0L35.1,24C36,25.7,36.1,27.5,35.6,29z"></path>
+              </svg>
+              -->
+              <img class="d-block rounded-circle mb-2" src="assets/img/landing/creative-agency-ming/banner/tableshow-001.png" width="40">
+            </span>
+            Table's Show
+          </a>
+
+          <!-- Theme switcher -->
+          <div class="form-check form-switch mode-switch order-lg-2 me-3 me-lg-4 ms-auto" data-bs-toggle="mode">
+            <input class="form-check-input" type="checkbox" id="theme-mode">
+            <label class="form-check-label" for="theme-mode">
+              <i class="ai-sun fs-lg"></i>
+            </label>
+            <label class="form-check-label" for="theme-mode">
+              <i class="ai-moon fs-lg"></i>
+            </label>
+          </div>
+
+          <!-- Buy 按鍵 -->
+          <!--
+          <a class="btn btn-primary btn-sm fs-sm rounded-0 order-lg-3 d-none d-sm-inline-flex" href="https://themes.getbootstrap.com/product/around-multipurpose-template-ui-kit/" target="_blank" rel="noopener">
+            <i class="ai-cart fs-xl me-2 ms-n1"></i>
+            Buy now
+          </a>
+          -->
+
+          <!-- Mobile menu toggler (Hamburger) -->
+          <button class="navbar-toggler ms-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Navbar collapse (Main navigation) -->
+          <nav class="collapse navbar-collapse rounded-0" id="navbarNav">
+            <ul class="navbar-nav navbar-nav-scroll me-auto" style="--ar-scroll-height: 520px;">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown" aria-expanded="false">品牌</a>
+                <div class="dropdown-menu rounded-0 p-0">
+                  <div class="d-lg-flex">
+                    <div class="mega-dropdown-column pt-1 pt-lg-3 pb-lg-4">
+                      <ul class="list-unstyled mb-0">
+                        <li>
+                          <a class="dropdown-item" href="landing-creative-agency-ming.html">
+                            ICÔNE 系列
+                            <span class="text-danger fs-xs ms-2">New</span>
+                          </a>
+                          <span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 rounded-0" style="background-image: url(assets/img/megamenu/ming/menu-001.png);"></span>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="landing-creative-agency-ming.html">品牌A</a>
+                          <span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 z-2 opacity-0" style="background-image: url(assets/img/megamenu/ming/menu-002.png);"></span>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="landing-creative-agency-ming.html">品牌B</a>
+                          <span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 z-2 opacity-0" style="background-image: url(assets/img/megamenu/ming/menu-001.png);"></span>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="landing-creative-agency-ming.html">品牌C</a>
+                          <span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 z-2 opacity-0" style="background-image: url(assets/img/megamenu/ming/menu-002.png);"></span>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="landing-creative-agency-ming.html">品牌D</a>
+                          <span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 z-2 opacity-0" style="background-image: url(assets/img/megamenu/ming/menu-001.png);"></span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="mega-dropdown-column pb-2 pt-lg-3 pb-lg-4">
+                      <ul class="list-unstyled mb-0">
+                        <li>
+                          <a class="dropdown-item" href="landing-creative-agency-ming.html">品牌E</a>
+                          <span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 z-2 opacity-0" style="background-image: url(assets/img/megamenu/ming/menu-002.png);"></span>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="landing-creative-agency-ming.html">品牌F</a>
+                          <span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 z-2 opacity-0" style="background-image: url(assets/img/megamenu/ming/menu-001.png);"></span>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="landing-creative-agency-ming.html">品牌G</a>
+                          <span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 z-2 opacity-0" style="background-image: url(assets/img/megamenu/ming/menu-002.png);"></span>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="landing-creative-agency-ming.html">
+                            品牌H
+                            <span class="text-danger fs-xs ms-2">New</span>
+                          </a>
+                          <span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 z-2 opacity-0" style="background-image: url(assets/img/megamenu/ming/menu-001.png);"></span>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="landing-creative-agency-ming.html">品牌I</a>
+                          <span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 z-2 opacity-0" style="background-image: url(assets/img/megamenu/ming/menu-002.png);"></span>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="landing-creative-agency-ming.html">品牌J</a>
+                          <span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 z-2 opacity-0" style="background-image: url(assets/img/megamenu/ming/menu-001.png);"></span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="mega-dropdown-column position-relative border-start z-3"></div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">產品材質</a>
+                <ul class="dropdown-menu rounded-0">
+                  <li class="dropdown">
+                    <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">玻璃</a>
+                    <ul class="dropdown-menu rounded-0">
+                      <li><a class="dropdown-item" href="landing-creative-agency-ming.html">杯子</a></li>
+                      <li><a class="dropdown-item" href="landing-creative-agency-ming.html">碗公</a></li>
+                      <li><a class="dropdown-item" href="landing-creative-agency-ming.html">吸管</a></li>
+                      <li><a class="dropdown-item" href="landing-creative-agency-ming.html">蓋子</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">瓷器</a>
+                    <ul class="dropdown-menu rounded-0">
+                      <li><a class="dropdown-item" href="landing-creative-agency-ming.html">飯碗</a></li>
+                      <li><a class="dropdown-item" href="landing-creative-agency-ming.html">盤子</a></li>
+                      <li><a class="dropdown-item" href="landing-creative-agency-ming.html">碟子</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">五金</a>
+                    <ul class="dropdown-menu rounded-0">
+                      <li><a class="dropdown-item" href="landing-creative-agency-ming.html">剪刀</a></li>
+                      <li><a class="dropdown-item" href="landing-creative-agency-ming.html">廚刀</a></li>
+                      <li><a class="dropdown-item" href="landing-creative-agency-ming.html">叉子</a></li>
+                      <li><a class="dropdown-item" href="landing-creative-agency-ming.html">其他料理工具</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">壓克力</a>
+                    <ul class="dropdown-menu rounded-0">
+                      <li><a class="dropdown-item" href="landing-creative-agency-ming.html">廣告版</a></li>
+                      <li><a class="dropdown-item" href="landing-creative-agency-ming.html">隔板</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">木頭</a>
+                    <ul class="dropdown-menu rounded-0">
+                      <li><a class="dropdown-item" href="landing-creative-agency-ming.html">筷子</a></li>
+                      <li><a class="dropdown-item" href="landing-creative-agency-ming.html">湯匙</a></li>
+                      <li><a class="dropdown-item" href="landing-creative-agency-ming.html">勺子</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">產品分類</a>
+                <ul class="dropdown-menu rounded-0">
+                  <li><a class="dropdown-item" href="landing-creative-agency-ming.html">餐桌系列</a></li>
+                  <li><a class="dropdown-item" href="landing-creative-agency-ming.html">內廚用品</a></li>
+                  <li><a class="dropdown-item" href="landing-creative-agency-ming.html">戶外廚具</a></li>
+                  <li><a class="dropdown-item" href="landing-creative-agency-ming.html">綜合禮品</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="landing-creative-agency-ming.html">聯繫我們</a>
+              </li>
+            </ul>
+            <div class="d-sm-none p-3 mt-n3">
+              <a class="btn btn-primary w-100 rounded-0 mb-1" href="https://themes.getbootstrap.com/product/around-multipurpose-template-ui-kit/" target="_blank" rel="noopener">
+                <i class="ai-cart fs-xl me-2 ms-n1"></i>
+                Buy now
+              </a>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+
+      <!-- Hero -->
+      <section class="container py-5 mt-5 mb-xl-3 mb-xxl-5">
+        <div class="row pt-2">
+
+          <!-- Text + CTA button -->
+          <div class="col-lg-6 d-flex flex-column mb-4 mb-lg-0 pb-sm-3 pb-lg-0">
+            <h1 class="display-1 text-uppercase fw-bold mt-auto mb-2 text-primary-emphasis">Table's <br><span class="fw-normal text-warning">ICÔNE 餐桌系列</span><br> Show<span class="d-none d-md-inline-block align-middle ms-4" style="width: 120px; height: 2px; background-color: currentColor;"></span></h1>
+            <div class="d-flex align-items-center py-4 py-lg-5">
+              <!-- <a class="btn btn-lg btn-primary rounded-0 me-2 me-sm-3" href="#">Let's work together</a> -->
+              <!-- <div class="flex-shrink-sm-0">
+                <img class="d-dark-mode-none" src="assets/img/brands/clutch-rating-dark.svg" width="155" alt="Clutch">
+                <img class="d-none d-dark-mode-block" src="assets/img/brands/clutch-rating-light.svg" width="155" alt="Clutch">
+              </div> -->
+            </div>
+            <!--
+            <ul class="nav mt-auto mx-n2 pt-sm-3 pt-lg-0">
+              <li class="nav-item me-3">
+                <a class="nav-link p-2" href="#">instagram</a>
+              </li>
+              <li class="nav-item me-3">
+                <a class="nav-link p-2" href="#">dribbble</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2" href="#">behance</a>
+              </li>
+            </ul>
+            -->
+          </div>
+
+          <!-- Services (Grid of cards) -->
+          <div class="col-lg-6">
+            <div class="row row-cols-1 row-cols-sm-2 g-1">
+
+              <!-- Card -->
+              <div class="col">
+                <a class="card-flip" href="#">
+                  <div class="card-flip-inner">
+                    <div class="card-flip-front" style="background-image: url(assets/img/landing/creative-agency-ming/services/006.webp);">
+                      <div class="d-flex flex-column h-100" data-bs-theme="light">
+                        <!-- <h2 class="fs-lg fw-normal mb-0 mt-auto">Strategy</h2> -->
+                      </div>
+                    </div>
+                    <div class="card-flip-back bg-primary">
+                      <div class="d-flex flex-column h-100 px-sm-2 pt-sm-2 px-lg-0 pt-lg-0 px-xl-3 pt-xl-3">
+                        <h3 class="h4 text-white">廚師工具</h3>
+                        <ul class="text-body text-white-50 ps-4 mb-3">
+                          <li class="mb-2">軟式鏟子</li>
+                          <li class="mb-2">輕盈的攪拌器</li>
+                          <li class="mb-2">萬用鉗子</li>
+                          <li class="mb-2">有槽勺子</li>
+                          <li class="mb-1">稱手的削皮器</li>
+                        </ul>
+                        
+                        <div class="text-end pt-3 pt-sm-2 pt-xl-4 mt-auto me-sm-n2 me-lg-0 me-xl-n3">
+                          <div class="btn btn-sm btn-icon btn-outline-primary rounded-circle">
+                            <i class="ai-arrow-right"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Card -->
+              <div class="col">
+                <a class="card-flip" href="#">
+                  <div class="card-flip-inner">
+                    <div class="card-flip-front" style="background-image: url(assets/img/landing/creative-agency-ming/services/001.webp);">
+                      <div class="d-flex flex-column h-100" data-bs-theme="light">
+                        <!-- <h2 class="fs-lg fw-normal mb-0 mt-auto">Social</h2> -->
+                      </div>
+                    </div>
+                    <div class="card-flip-back bg-warning">
+                      <div class="d-flex flex-column h-100 px-sm-2 pt-sm-2 px-lg-0 pt-lg-0 px-xl-3 pt-xl-3">
+                        <h3 class="h4">廚師刀</h3>
+                        <p class="text-body text-dark-mode-dark mb-3">令人驚嘆的刀具套裝。這是我見過的最好看的磁性支架。這將是一份美麗的婚禮或喬遷禮物。</p>
+                        <div class="text-end pt-3 pt-sm-2 pt-xl-4 mt-auto me-sm-n2 me-lg-0 me-xl-n3">
+                          <div class="btn btn-sm btn-icon btn-outline-primary rounded-circle">
+                            <i class="ai-arrow-right"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Card -->
+              <div class="col order-sm-2">
+                <a class="card-flip" href="#">
+                  <div class="card-flip-inner">
+                    <div class="card-flip-front" style="background-image: url(assets/img/landing/creative-agency-ming/services/005.webp);">
+                      <div class="d-flex flex-column h-100" data-bs-theme="light">
+                        <!-- <h2 class="fs-lg fw-normal mb-0 mt-auto">Web design</h2> -->
+                      </div>
+                    </div>
+                    <div class="card-flip-back bg-primary">
+                      <div class="d-flex flex-column h-100 px-sm-2 pt-sm-2 px-lg-0 pt-lg-0 px-xl-3 pt-xl-3">
+                        <h3 class="h4 text-white">餐桌巾</h3>
+                        <p class="text-body text-white-50 mb-3">我們堅信布藝餐巾、餐墊和桌布是日常必需品，旨在透過柔軟的觸感和豐富的功能來提升您的日常體驗。</p>
+                        <div class="text-end pt-3 pt-sm-2 pt-xl-4 mt-auto me-sm-n2 me-lg-0 me-xl-n3">
+                          <div class="btn btn-sm btn-icon btn-outline-primary rounded-circle">
+                            <i class="ai-arrow-right"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Card -->
+              <div class="col order-sm-1">
+                <a class="card-flip" href="#">
+                  <div class="card-flip-inner">
+                    <div class="card-flip-front" style="background-image: url(assets/img/landing/creative-agency-ming/services/004.webp);">
+                      <div class="d-flex flex-column h-100" data-bs-theme="light">
+                        <!-- <h2 class="fs-lg fw-normal mb-0 mt-auto">Branding</h2> -->
+                      </div>
+                    </div>
+                    <div class="card-flip-back bg-warning">
+                      <div class="d-flex flex-column h-100 px-sm-2 pt-sm-2 px-lg-0 pt-lg-0 px-xl-3 pt-xl-3">
+                        <h3 class="h4">醬炒鍋</h3>
+                        <p class="text-body text-dark-mode-dark mb-3">高壁的炒鍋可以安全地容納您的燉菜和醬汁。此外，它還具有我們標誌性的銅芯，可在未來幾年內每次都快速、均勻地加熱和完美的灼燒效果。</p>
+                        <div class="text-end pt-3 pt-sm-2 pt-xl-4 mt-auto me-sm-n2 me-lg-0 me-xl-n3">
+                          <div class="btn btn-sm btn-icon btn-outline-primary rounded-circle">
+                            <i class="ai-arrow-right"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- About -->
+      <section class="container py-md-4 py-lg-5 mb-xl-3 mb-xxl-5">
+        <div class="row pt-sm-2">
+          <div class="col-xl-10">
+            <p class="fs-2 text-dark pb-md-2 mb-lg-5"><span class="fw-semibold text-warning">ICÔNE 系列</span> 為您的餐桌增添地中海風格。由瓷器製成，圓形堅固而時尚的形狀確保強度和耐用性。每件作品均以各種柔和的灰色和橄欖綠色調為特色，內外均採用絲滑啞光飾面，帶來獨特的餐桌體驗。系列包括 <span class="fw-semibold text-primary">淺盤、深盤、碗、餐具、摩卡杯、杯子、馬克杯、碟子、牛奶/醬油壺、糖壺、茶壺、鹽瓶、胡椒瓶和玻璃水瓶</span> 。</p>
+          </div>
+        </div>
+        <br>
+        <div class="row pb-5">
+          <div class="col-sm-4 col-lg-3 mb-3">
+            <h3 class="display-1 mb-0 mb-sm-1">16</h3>
+            <span class="fs-md">種多樣款式可供您搭配，營造氛圍感</span>
+          </div>
+          <div class="col-sm-4 col-lg-3 mb-3">
+            <h3 class="display-1 mb-0 mb-sm-1">8</h3>
+            <span class="fs-md">種材質依您需求調整</span>
+          </div>
+          <div class="col-sm-4 col-lg-3 mb-2 mb-sm-3">
+            <h3 class="display-1 mb-0 mb-sm-1">60</h3>
+            <span class="fs-md">日可客製化工期</span>
+          </div>
+        </div>
+      </section>
+
+      <!--隔板banner01-->
+      <section class="">
+        <!-- Parallax scroll-opacity effect -->
+        <div class="jarallax bg-dark py-5" data-jarallax  data-type="scroll-opacity" data-speed="0.6">
+          <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></span>
+          <div class="jarallax-img" style="background-image: url(assets/img/landing/creative-agency-ming/banner/category-banner.jpeg);"></div>
+          <div class="position-relative text-center z-2 px-3 py-sm-5 my-lg-5">
+            <br>
+            <h2 class="h1 text-white my-5">ICÔNE 餐桌系列</h2>
+            <br>
+          </div>
+        </div>
+        <br><br>
+      </section>
+
+      <!-- Our projects (Filterable masonry grid) -->
+      <section class="container overflow-hidden pb-5 mb-2 mb-lg-3 mb-xl-4 mb-xxl-5">
+        <div class="masonry-filterable">
+          <div class="row pb-lg-4 mb-2 mb-sm-3">
+
+            <!-- Page title -->
+            <div class="col-xxl-3 col-lg-4 text-center text-lg-start">
+              <h1>商品列表</h1>
+              <p class="mb-4 mb-lg-0">我們每餐都離不開這些簡單的廚具。切片、收集、切割、切絲和舀取所需的一切。</p>
+            </div>
+
+            <!-- Filters -->
+            <div class="col-xxl-9 col-lg-8 d-flex">
+              <ul class="masonry-filters nav nav-pills fs-sm flex-nowrap overflow-auto text-nowrap w-100 mx-auto me-lg-0 pb-3" >
+                <li class="nav-item mb-0">
+                  <a class="nav-link border active" href="#" data-group="all">全部</a>
+                </li>
+                <li class="nav-item mb-0">
+                  <a class="nav-link border" href="#" data-group="kitchenTools">廚師工具</a>
+                </li>
+                <li class="nav-item mb-0">
+                  <a class="nav-link border" href="#" data-group="kitchenKnives">廚師刀</a>
+                </li>
+                <li class="nav-item mb-0">
+                  <a class="nav-link border" href="#" data-group="sautePan">醬炒鍋</a>
+                </li>
+                <li class="nav-item mb-0">
+                  <a class="nav-link border" href="#" data-group="placeMats">餐桌巾</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Grid of portfolio items -->
+          <div class="masonry-grid" data-columns="2">
+
+            <!-- Item -->
+            <article class="masonry-grid-item pb-5 mb-md-2 mb-lg-4 mb-xl-5" data-groups='["kitchenTools"]'>
+              <div class="zoom-effect position-relative border-bottom pb-3" style="max-width: 512px;">
+                <div class="zoom-effect-wrapper">
+                  <div class="zoom-effect-img">
+                    <img src="assets/img/landing/creative-agency-ming/items/tools-001.webp" alt="Image">
+                  </div>
+                </div>
+                <div class="pt-4 mt-lg-2">
+                  <h2 class="h4 mb-2">
+                    <a class="stretched-link" href="landing-product-ming.html">鍋鏟</a>
+                  </h2>
+                  <div class="d-flex justify-content-between fs-lg text-body-secondary">
+                    <span>輕鬆烹飪的必備工具</span>
+                    <span>編號：10009553</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Item -->
+            <article class="masonry-grid-item pb-5 mb-md-2 mb-lg-4 mb-xl-5" data-groups='["kitchenTools"]'>
+              <div class="zoom-effect position-relative border-bottom pb-3" style="max-width: 467px;">
+                <div class="zoom-effect-wrapper">
+                  <div class="zoom-effect-img">
+                    <img src="assets/img/landing/creative-agency-ming/items/tools-002.webp" alt="Image">
+                  </div>
+                </div>
+                <div class="pt-4 mt-lg-2">
+                  <h2 class="h4 mb-2">
+                    <a class="stretched-link" href="landing-product-ming.html">削皮器</a>
+                  </h2>
+                  <div class="d-flex justify-content-between fs-lg text-body-secondary">
+                    <span>輕鬆削皮的必備工具</span>
+                    <span>編號：10009554</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+
+            <!-- Item -->
+            <article class="masonry-grid-item pb-5 mb-md-2 mb-lg-4 mb-xl-5" data-groups='["kitchenKnives"]'>
+              <div class="zoom-effect position-relative border-bottom pb-3" style="max-width: 704px;">
+                <div class="zoom-effect-wrapper">
+                  <div class="zoom-effect-img">
+                    <img src="assets/img/landing/creative-agency-ming/items/knives-001.webp" alt="Image">
+                  </div>
+                </div>
+                <div class="pt-4 mt-lg-2">
+                  <h2 class="h4 mb-2">
+                    <a class="stretched-link" href="landing-product-ming.html">廚師刀(三件組)</a>
+                  </h2>
+                  <div class="d-flex justify-content-between fs-lg text-body-secondary">
+                    <span>大中小一次擁有</span>
+                    <span>編號：10009555</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Item -->
+            <article class="masonry-grid-item pb-5 mb-md-2 mb-lg-4 mb-xl-5" data-groups='["kitchenKnives"]'>
+              <div class="zoom-effect position-relative border-bottom ms-auto pb-3" style="max-width: 605px;">
+                <div class="zoom-effect-wrapper">
+                  <div class="zoom-effect-img">
+                    <img src="assets/img/landing/creative-agency-ming/items/knives-002.webp" alt="Image">
+                  </div>
+                </div>
+                <div class="pt-4 mt-lg-2">
+                  <h2 class="h4 mb-2">
+                    <a class="stretched-link" href="landing-product-ming.html">廚師刀</a>
+                  </h2>
+                  <div class="d-flex justify-content-between fs-lg text-body-secondary">
+                    <span>您廚房內必備的經典款式</span>
+                    <span>編號：10009556</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Item -->
+            <article class="masonry-grid-item pb-5 mb-md-2 mb-lg-4 mb-xl-5" data-groups='["kitchenKnives"]'>
+              <div class="zoom-effect position-relative border-bottom pb-3" style="max-width: 550px;">
+                <div class="zoom-effect-wrapper">
+                  <div class="zoom-effect-img">
+                    <img src="assets/img/landing/creative-agency-ming/items/knives-003.webp" alt="Image">
+                  </div>
+                </div>
+                <div class="pt-4 mt-lg-2">
+                  <h2 class="h4 mb-2">
+                    <a class="stretched-link" href="landing-product-ming.html">餐刀(三件組)</a>
+                  </h2>
+                  <div class="d-flex justify-content-between fs-lg text-body-secondary">
+                    <span>西餐好朋友</span>
+                    <span>編號：10009557</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Item -->
+            <article class="masonry-grid-item pb-5 mb-md-2 mb-lg-4 mb-xl-5" data-groups='["sautePan"]'>
+              <div class="zoom-effect position-relative border-bottom mx-auto pb-3" style="max-width: 470px;">
+                <div class="zoom-effect-wrapper">
+                  <div class="zoom-effect-img">
+                    <img src="assets/img/landing/creative-agency-ming/items/pan-001.webp" alt="Image">
+                  </div>
+                </div>
+                <div class="pt-4 mt-lg-2">
+                  <h2 class="h4 mb-2">
+                    <a class="stretched-link" href="landing-product-ming.html">醬炒鍋</a>
+                  </h2>
+                  <div class="d-flex justify-content-between fs-lg text-body-secondary">
+                    <span>拌煮義大利麵的利器</span>
+                    <span>編號：10009558</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Item -->
+            <article class="masonry-grid-item pb-5 mb-md-2 mb-lg-4 mb-xl-5" data-groups='["placeMats"]'>
+              <div class="zoom-effect position-relative border-bottom mx-auto pb-3" style="max-width: 470px;">
+                <div class="zoom-effect-wrapper">
+                  <div class="zoom-effect-img">
+                    <img src="assets/img/landing/creative-agency-ming/items/placeMats-001.webp" alt="Image">
+                  </div>
+                </div>
+                <div class="pt-4 mt-lg-2">
+                  <h2 class="h4 mb-2">
+                    <a class="stretched-link" href="landing-product-ming.html">經典餐巾</a>
+                  </h2>
+                  <div class="d-flex justify-content-between fs-lg text-body-secondary">
+                    <span>經典的餐桌必需品</span>
+                    <span>編號：10009559</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Item -->
+            <article class="masonry-grid-item pb-5 mb-md-2 mb-lg-4 mb-xl-5" data-groups='["placeMats"]'>
+              <div class="zoom-effect position-relative border-bottom mx-auto pb-3" style="max-width: 470px;">
+                <div class="zoom-effect-wrapper">
+                  <div class="zoom-effect-img">
+                    <img src="assets/img/landing/creative-agency-ming/items/placeMats-002.webp" alt="Image">
+                  </div>
+                </div>
+                <div class="pt-4 mt-lg-2">
+                  <h2 class="h4 mb-2">
+                    <a class="stretched-link" href="landing-product-ming.html">絨織餐巾</a>
+                  </h2>
+                  <div class="d-flex justify-content-between fs-lg text-body-secondary">
+                    <span>疏水疏油的新技術</span>
+                    <span>編號：10009560</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Item -->
+            <article class="masonry-grid-item pb-5 mb-md-2 mb-lg-4 mb-xl-5" data-groups='["placeMats"]'>
+              <div class="zoom-effect position-relative border-bottom mx-auto pb-3" style="max-width: 470px;">
+                <div class="zoom-effect-wrapper">
+                  <div class="zoom-effect-img">
+                    <img src="assets/img/landing/creative-agency-ming/items/placeMats-003.webp" alt="Image">
+                  </div>
+                </div>
+                <div class="pt-4 mt-lg-2">
+                  <h2 class="h4 mb-2">
+                    <a class="stretched-link" href="landing-product-ming.html">大桌巾</a>
+                  </h2>
+                  <div class="d-flex justify-content-between fs-lg text-body-secondary">
+                    <span>超大張的餐桌巾</span>
+                    <span>編號：10009561</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+
+          <!-- Button -->
+          <!-- <div class="text-center pb-sm-2 pb-md-4 mt-n1 mt-lg-n2">
+            <a class="btn btn-lg btn-outline-dark rounded-0" href="#">Let's work together</a>
+          </div> -->
+        </div>
+      </section>
+
+
+      <!-- Clients (Logos autoplay slider) -->
+      <!--
+      <section class="pt-sm-1 pt-lg-3 pt-xl-4">
+        <div class="container text-center">
+          <h2 class="h1">We partner with more than 60 brands</h2>
+          <p class="pb-1 pb-sm-2 pb-md-3 pb-lg-4 mb-3">Clients who have become our friends for many years</p>
+        </div>
+        <div class="swiper pb-3 pb-sm-4 mb-xl-2" data-swiper-options='{
+          "loop": true,
+          "grabCursor": false,
+          "centeredSlides": true,
+          "autoplay": {
+            "delay": 0,
+            "disableOnInteraction": false
+          },
+          "freeMode": true,
+          "speed": 10000,
+          "freeModeMomentum": false,
+          "breakpoints": {
+            "0": { "slidesPerView": 2 },
+            "600": { "slidesPerView": 3 },
+            "800": { "slidesPerView": 4 },
+            "1200": { "slidesPerView": 5 },
+            "1400": { "slidesPerView": 6 },
+            "1600": { "slidesPerView": 7 }
+          }
+        }'>
+          <div class="swiper-wrapper" style="transition-timing-function: linear !important;">
+            <div class="swiper-slide">
+              <img class="d-block d-dark-mode-none mx-auto" src="assets/img/brands/starcraft-dark.svg" width="196" alt="Starcraft">
+              <img class="d-none d-dark-mode-block mx-auto" src="assets/img/brands/starcraft-light.svg" width="196" alt="Starcraft">
+            </div>
+            <div class="swiper-slide">
+              <img class="d-block mx-auto" src="assets/img/brands/auchan.svg" width="196" alt="Auchan">
+            </div>
+            <div class="swiper-slide">
+              <img class="d-block mx-auto" src="assets/img/brands/klinos.svg" width="196" alt="Klinos">
+            </div>
+            <div class="swiper-slide">
+              <img class="d-block mx-auto" src="assets/img/brands/suzuki.svg" width="196" alt="Suzuki">
+            </div>
+            <div class="swiper-slide">
+              <img class="d-block mx-auto" src="assets/img/brands/airbnb.svg" width="196" alt="Airbnb">
+            </div>
+            <div class="swiper-slide">
+              <img class="d-block mx-auto" src="assets/img/brands/philips.svg" width="196" alt="Philips">
+            </div>
+            <div class="swiper-slide">
+              <img class="d-block mx-auto" src="assets/img/brands/careem.svg" width="196" alt="Careem">
+            </div>
+            <div class="swiper-slide">
+              <img class="d-block d-dark-mode-none mx-auto" src="assets/img/brands/puma-dark.svg" width="196" alt="Puma">
+              <img class="d-none d-dark-mode-block mx-auto" src="assets/img/brands/puma-light.svg" width="196" alt="Puma">
+            </div>
+            <div class="swiper-slide">
+              <img class="d-block mx-auto" src="assets/img/brands/alpine.svg" width="196" alt="Alpine">
+            </div>
+          </div>
+        </div>
+        <div class="swiper" dir="rtl" data-swiper-options='{
+          "loop": true,
+          "grabCursor": false,
+          "centeredSlides": true,
+          "autoplay": {
+            "delay": 0,
+            "disableOnInteraction": false
+          },
+          "freeMode": true,
+          "speed": 8500,
+          "freeModeMomentum": false,
+          "breakpoints": {
+            "0": { "slidesPerView": 2 },
+            "600": { "slidesPerView": 3 },
+            "800": { "slidesPerView": 4 },
+            "1200": { "slidesPerView": 5 },
+            "1400": { "slidesPerView": 6 },
+            "1600": { "slidesPerView": 7 }
+          }
+        }'>
+          <div class="swiper-wrapper" style="transition-timing-function: linear !important;">
+            <div class="swiper-slide">
+              <img class="d-block mx-auto" src="assets/img/brands/heineken.svg" width="196" alt="Heineken">
+            </div>
+            <div class="swiper-slide">
+              <img class="d-block d-dark-mode-none mx-auto" src="assets/img/brands/champion-dark.svg" width="196" alt="Champion">
+              <img class="d-none d-dark-mode-block mx-auto" src="assets/img/brands/champion-light.svg" width="196" alt="Champion">
+            </div>
+            <div class="swiper-slide">
+              <img class="d-block mx-auto" src="assets/img/brands/auchan.svg" width="196" alt="Auchan">
+            </div>
+            <div class="swiper-slide">
+              <img class="d-block mx-auto" src="assets/img/brands/philips.svg" width="196" alt="Philips">
+            </div>
+            <div class="swiper-slide">
+              <img class="d-block mx-auto" src="assets/img/brands/airbnb.svg" width="196" alt="Airbnb">
+            </div>
+            <div class="swiper-slide">
+              <img class="d-block mx-auto" src="assets/img/brands/alpine.svg" width="196" alt="Alpine">
+            </div>
+            <div class="swiper-slide">
+              <img class="d-block d-dark-mode-none mx-auto" src="assets/img/brands/puma-dark.svg" width="196" alt="Puma">
+              <img class="d-none d-dark-mode-block mx-auto" src="assets/img/brands/puma-light.svg" width="196" alt="Puma">
+            </div>
+            <div class="swiper-slide">
+              <img class="d-block mx-auto" src="assets/img/brands/foster.svg" width="196" alt="Foster">
+            </div>
+            <div class="swiper-slide">
+              <img class="d-block d-dark-mode-none mx-auto" src="assets/img/brands/starcraft-dark.svg" width="196" alt="Starcraft">
+              <img class="d-none d-dark-mode-block mx-auto" src="assets/img/brands/starcraft-light.svg" width="196" alt="Starcraft">
+            </div>
+          </div>
+        </div>
+        <br><br>
+      </section>
+      -->
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer bg-dark position-relative py-4 py-md-5">
+    <div class="d-none d-dark-mode-block position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(255,255,255, .03);"></div>
+    <div class="container position-relative z-2 pt-4 pt-md-2 pt-xl-4 pt-xxl-5" data-bs-theme="dark">
+      <div class="row py-md-3 mb-4 mb-md-5">
+        <div class="col-md-7 col-lg-6 col-xxl-5 mb-sm-4 mb-md-0">
+          <h2 class="display-4 mb-4 mb-md-5">Table's Shows</h2>
+          <div class="d-sm-flex align-items-center">
+            <a class="btn btn-lg btn-warning rounded-0 me-sm-3 me-lg-4" href="#">與我們聯繫</a>
+            <p class="text-body fs-sm py-3 py-sm-0 ps-sm-2 mb-0">為各地的酒店和餐廳提供了發揮創意並輕鬆混合和搭配食物、氛圍和展示的機會。</p>
+          </div>
+        </div>
+        <div class="col-md-5 offset-lg-1 offset-xxl-2 d-flex flex-column">
+          <div class="nav mx-n2 mx-lg-n4 mb-2 mb-sm-3">
+            <a class="nav-link text-warning px-2 px-lg-4" href="mailto:example@email.com">example@email.com</a>
+            <a class="nav-link px-3 px-lg-4" href="#">Privay policy</a>
+          </div>
+          <div class="nav flex-column mb-3 mb-sm-4">
+            <a class="nav-link py-1 px-0" href="tel:+15262200444">+&nbsp;886&nbsp;2&nbsp;885&nbsp;5566</a>
+            <a class="nav-link py-1 px-0" href="tel:+15262200000">+&nbsp;886&nbsp;928&nbsp;123&nbsp;456</a>
+          </div>
+          <div class="nav mx-n2 mt-auto">
+            <a class="nav-link py-1 px-2 me-2" href="#">instagram</a>
+            <a class="nav-link py-1 px-2 me-2" href="#">behance</a>
+            <a class="nav-link py-1 px-2 me-2" href="#">medium</a>
+            <a class="nav-link py-1 px-2" href="#">dribbble</a>
+          </div>
+        </div>
+      </div>
+      <p class="nav fs-sm pt-3 pb-2 pb-lg-0 mb-0">
+        <span class="text-body-secondary">&copy; All rights reserved. Made by</span>
+        <a class="nav-link fw-normal p-0 ms-1" href="https://createx.studio/" target="_blank" rel="noopener">Table's Shows</a>
+      </p>
+    </div>
+  </footer>
+  
+
+    <!-- Back to top button -->
+    <a class="btn-scroll-top" href="#top" data-scroll aria-label="Scroll back to top">
+      <svg viewBox="0 0 40 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"></circle>
+      </svg>
+      <i class="ai-arrow-up"></i>
+    </a>
+
+
+    <!-- Vendor scripts: JS libraries and plugins -->
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/shufflejs/dist/shuffle.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- ming for banner -->
+    <script src="assets/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="assets/vendor/parallax-js/dist/parallax.min.js"></script>
+
+    <!-- Bootstrap + Theme scripts -->
+    <script src="assets/js/theme.min.js"></script>
+  </body>
+</html>

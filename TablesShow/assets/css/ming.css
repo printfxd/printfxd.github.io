@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/*
+ * Around | Multipurpose Bootstrap HTML Template
+ * Copyright 2023 Createx Studio
+ * Theme styles
+*/
+/* stylelint-disable stylistic/value-list-max-empty-lines, stylistic/function-max-empty-lines, stylistic/selector-list-comma-newline-after, declaration-no-important, property-no-vendor-prefix */
+
+:root {
+  --ming-blue: #0d6efd;
+  --ming-indigo: #6610f2;
+  --ming-purple: #6f42c1;
+  --ming-pink: #d63384;
+  --ming-red: #dc3545;
+  --ming-orange: #fd7e14;
+  --ming-yellow: #ffc107;
+  --ming-sandy-brown: #f4a460;
+  --ming-old-lace: #fdf5e6;
+  --ming-green: #198754;
+  --ming-teal: #20c997;
+  --ming-cyan: #0dcaf0;
+  --ming-white: #fff;
+  --ming-gray: #6c757d;
+  --ming-gray-dark: #343a40;
+  --ming-primary: #0d6efd;
+  --ming-secondary: #6c757d;
+  --ming-success: #198754;
+  --ming-info: #0dcaf0;
+  --ming-warning: #ffc107;
+  --ming-danger: #dc3545;
+  --ming-light: #f8f9fa;
+  --ming-dark: #212529;
+  --ming-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --ming-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --ming-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+}

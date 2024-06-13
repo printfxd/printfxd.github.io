@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+    
+    <!-- SEO meta tags -->
+    <title>Table's Show | ICÔNE - THE TABLE KNIVES</title>
+    <meta name="description" content="Around - Multipurpose Bootstrap HTML Template">
+    <meta name="keywords" content="bootstrap, business, corporate, coworking space, services, creative agency, dashboard, e-commerce, mobile app showcase, saas, multipurpose, product landing, shop, software, ui kit, web studio, landing, light and dark mode, html5, css3, javascript, gallery, slider, touch, creative">
+    <meta name="author" content="Createx Studio">
+
+    <!-- Webmanifest + Favicon / App icons -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" href="assets/img/landing/product-ming/banner/tableshow-001.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="assets/app-icons/icon-180x180.png">
+        
+    <!-- Theme switcher (color modes) -->
+    <script src="assets/js/theme-switcher.js"></script>
+
+    <!-- Import Google font (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" id="google-font">
+
+    <!-- Ming styles + Bootstrap -->
+    <link rel="stylesheet" href="assets/css/ming.css">
+
+    <!-- Vendor styles -->
+    <link rel="stylesheet" media="screen" href="assets/vendor/aos/dist/aos.css">
+    <link rel="stylesheet" media="screen" href="assets/vendor/lightgallery/css/lightgallery-bundle.min.css">
+
+    <!-- Font icons -->
+    <link rel="stylesheet" href="assets/icons/around-icons.min.css">
+
+    <!-- Theme styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      [data-bs-theme="dark"] .page-loading {
+        background-color: #121519;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-family: "Inter", sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #6f788b;
+      }
+      [data-bs-theme="dark"] .page-loading-inner > span {
+        color: #fff;
+        opacity: .6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        background-color: #d7dde2; 
+        border-radius: 50%;
+        opacity: 0;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      [data-bs-theme="dark"] .page-spinner {
+        background-color: rgba(255,255,255,.25);
+      }
+      @-webkit-keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+      @keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+    </style>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading')
+          preloader.classList.remove('active')
+          setTimeout(function () {
+            preloader.remove()
+          }, 1500)
+        }
+      })()
+    </script>
+  </head>
+
+
+  <!-- Body -->
+  <body>
+
+
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div>
+        <span>資料載入中，請稍後...</span>
+      </div>
+    </div>
+
+
+    <!-- Page wrapper -->
+    <main class="page-wrapper">
+
+      <!-- Navbar. Remove 'fixed-top' class to make the navigation bar scrollable with the page -->
+      <header class="navbar navbar-expand-lg fixed-top bg-light">
+        <div class="container">
+
+          <!-- Navbar brand (Logo) -->
+          <a class="navbar-brand pe-sm-3" href="landing-shop-v1-ming.html">
+            <span class="text-primary flex-shrink-0 me-2">
+              <!--
+              <svg width="35" height="32" viewBox="0 0 36 33" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor" d="M35.6,29c-1.1,3.4-5.4,4.4-7.9,1.9c-2.3-2.2-6.1-3.7-9.4-3.7c-3.1,0-7.5,1.8-10,4.1c-2.2,2-5.8,1.5-7.3-1.1c-1-1.8-1.2-4.1,0-6.2l0.6-1.1l0,0c0.6-0.7,4.4-5.2,12.5-5.7c0.5,1.8,2,3.1,3.9,3.1c2.2,0,4.1-1.9,4.1-4.2s-1.8-4.2-4.1-4.2c-2,0-3.6,1.4-4,3.3H7.7c-0.8,0-1.3-0.9-0.9-1.6l5.6-9.8c2.5-4.5,8.8-4.5,11.3,0L35.1,24C36,25.7,36.1,27.5,35.6,29z"></path>
+              </svg>
+              -->
+              <img class="d-block rounded-circle mb-2" src="assets/img/landing/product-ming/banner/tableshow-001.png" width="40">
+            </span>
+            Table's Show
+          </a>
+
+          <!-- Theme switcher -->
+          <div class="form-check form-switch mode-switch order-lg-2 me-3 me-lg-4 ms-auto" data-bs-toggle="mode">
+            <input class="form-check-input" type="checkbox" id="theme-mode">
+            <label class="form-check-label" for="theme-mode">
+              <i class="ai-sun fs-lg"></i>
+            </label>
+            <label class="form-check-label" for="theme-mode">
+              <i class="ai-moon fs-lg"></i>
+            </label>
+          </div>
+
+          <!-- Buy 按鍵 -->
+          <!--
+          <a class="btn btn-primary btn-sm fs-sm rounded-0 order-lg-3 d-none d-sm-inline-flex" href="https://themes.getbootstrap.com/product/around-multipurpose-template-ui-kit/" target="_blank" rel="noopener">
+            <i class="ai-cart fs-xl me-2 ms-n1"></i>
+            Buy now
+          </a>
+          -->
+
+          <!-- Mobile menu toggler (Hamburger) -->
+          <button class="navbar-toggler ms-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Navbar collapse (Main navigation) -->
+          <nav class="collapse navbar-collapse rounded-0" id="navbarNav">
+            <ul class="navbar-nav navbar-nav-scroll me-auto" style="--ar-scroll-height: 520px;">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown" aria-expanded="false">品牌</a>
+                <div class="dropdown-menu rounded-0 p-0">
+                  <div class="d-lg-flex">
+                    <div class="mega-dropdown-column pt-1 pt-lg-3 pb-lg-4">
+                      <ul class="list-unstyled mb-0">
+                        <li>
+                          <a class="dropdown-item" href="landing-creative-agency-ming.html">
+                            ICÔNE 系列
+                            <span class="text-danger fs-xs ms-2">New</span>
+                          </a>
+                          <span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 rounded-0" style="background-image: url(assets/img/megamenu/ming/menu-001.png);"></span>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="landing-creative-agency-ming.html">品牌A</a>
+                          <span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 z-2 opacity-0" style="background-image: url(assets/img/megamenu/ming/menu-002.png);"></span>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="landing-creative-agency-ming.html">品牌B</a>
+                          <span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 z-2 opacity-0" style="background-image: url(assets/img/megamenu/ming/menu-001.png);"></span>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="landing-creative-agency-ming.html">品牌C</a>
+                          <span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 z-2 opacity-0" style="background-image: url(assets/img/megamenu/ming/menu-002.png);"></span>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="landing-creative-agency-ming.html">品牌D</a>
+                          <span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 z-2 opacity-0" style="background-image: url(assets/img/megamenu/ming/menu-001.png);"></span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="mega-dropdown-column pb-2 pt-lg-3 pb-lg-4">
+                      <ul class="list-unstyled mb-0">
+                        <li>
+                          <a class="dropdown-item" href="landing-creative-agency-ming.html">品牌E</a>
+                          <span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 z-2 opacity-0" style="background-image: url(assets/img/megamenu/ming/menu-002.png);"></span>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="landing-creative-agency-ming.html">品牌F</a>
+                          <span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 z-2 opacity-0" style="background-image: url(assets/img/megamenu/ming/menu-001.png);"></span>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="landing-creative-agency-ming.html">品牌G</a>
+                          <span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 z-2 opacity-0" style="background-image: url(assets/img/megamenu/ming/menu-002.png);"></span>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="landing-creative-agency-ming.html">
+                            品牌H
+                            <span class="text-danger fs-xs ms-2">New</span>
+                          </a>
+                          <span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 z-2 opacity-0" style="background-image: url(assets/img/megamenu/ming/menu-001.png);"></span>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="landing-creative-agency-ming.html">品牌I</a>
+                          <span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 z-2 opacity-0" style="background-image: url(assets/img/megamenu/ming/menu-002.png);"></span>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="landing-creative-agency-ming.html">品牌J</a>
+                          <span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 z-2 opacity-0" style="background-image: url(assets/img/megamenu/ming/menu-001.png);"></span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="mega-dropdown-column position-relative border-start z-3"></div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">產品材質</a>
+                <ul class="dropdown-menu rounded-0">
+                  <li class="dropdown">
+                    <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">玻璃</a>
+                    <ul class="dropdown-menu rounded-0">
+                      <li><a class="dropdown-item" href="landing-creative-agency-ming.html">杯子</a></li>
+                      <li><a class="dropdown-item" href="landing-creative-agency-ming.html">碗公</a></li>
+                      <li><a class="dropdown-item" href="landing-creative-agency-ming.html">吸管</a></li>
+                      <li><a class="dropdown-item" href="landing-creative-agency-ming.html">蓋子</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">瓷器</a>
+                    <ul class="dropdown-menu rounded-0">
+                      <li><a class="dropdown-item" href="landing-creative-agency-ming.html">飯碗</a></li>
+                      <li><a class="dropdown-item" href="landing-creative-agency-ming.html">盤子</a></li>
+                      <li><a class="dropdown-item" href="landing-creative-agency-ming.html">碟子</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">五金</a>
+                    <ul class="dropdown-menu rounded-0">
+                      <li><a class="dropdown-item" href="landing-creative-agency-ming.html">剪刀</a></li>
+                      <li><a class="dropdown-item" href="landing-creative-agency-ming.html">廚刀</a></li>
+                      <li><a class="dropdown-item" href="landing-creative-agency-ming.html">叉子</a></li>
+                      <li><a class="dropdown-item" href="landing-creative-agency-ming.html">其他料理工具</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">壓克力</a>
+                    <ul class="dropdown-menu rounded-0">
+                      <li><a class="dropdown-item" href="landing-creative-agency-ming.html">廣告版</a></li>
+                      <li><a class="dropdown-item" href="landing-creative-agency-ming.html">隔板</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">木頭</a>
+                    <ul class="dropdown-menu rounded-0">
+                      <li><a class="dropdown-item" href="landing-creative-agency-ming.html">筷子</a></li>
+                      <li><a class="dropdown-item" href="landing-creative-agency-ming.html">湯匙</a></li>
+                      <li><a class="dropdown-item" href="landing-creative-agency-ming.html">勺子</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">產品分類</a>
+                <ul class="dropdown-menu rounded-0">
+                  <li><a class="dropdown-item" href="landing-creative-agency-ming.html">餐桌系列</a></li>
+                  <li><a class="dropdown-item" href="landing-creative-agency-ming.html">內廚用品</a></li>
+                  <li><a class="dropdown-item" href="landing-creative-agency-ming.html">戶外廚具</a></li>
+                  <li><a class="dropdown-item" href="landing-creative-agency-ming.html">綜合禮品</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="landing-creative-agency-ming.html">聯繫我們</a>
+              </li>
+            </ul>
+            <div class="d-sm-none p-3 mt-n3">
+              <a class="btn btn-primary w-100 rounded-0 mb-1" href="https://themes.getbootstrap.com/product/around-multipurpose-template-ui-kit/" target="_blank" rel="noopener">
+                <i class="ai-cart fs-xl me-2 ms-n1"></i>
+                Buy now
+              </a>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+
+
+      <!-- Hero -->
+      <section class="position-relative pt-sm-3 pt-md-5 mb-xl-3 mb-xxl-5">
+        <div class="position-absolute top-0 end-0 overflow-hidden mt-n5 mt-md-0">
+          <svg class="d-block mt-n5 mt-md-0 me-md-n5 me-xxl-0" width="1207" height="894" viewBox="0 0 1207 894" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color: var(--ming-old-lace);">
+            <circle cx="639" cy="255" r="639"></circle>
+          </svg>
+          <!-- Animated wave -->
+          <!-- <lottie-player class="position-absolute top-0 end-0 opacity-20 mt-n5 mt-md-0 me-md-n5 me-xxl-n4" src="assets/json/animation-soundwave.json" background="transparent" speed="1" loop autoplay style="max-width: 560px; height: 720px;"></lottie-player> -->
+        </div>
+        <div class="container pt-5 pb-lg-4 pb-xl-5 mt-5">
+          <div class="row pt-xl-4">
+            <!-- Sticky image -->
+            <div class="col-md-5 col-lg-6 offset-xxl-1 order-md-2 position-relative mb-3 mb-md-0" style="margin-top: -115px;">
+              <div class="d-none d-md-block position-absolute bottom-0 end-0 text-uppercase fw-bold lh-1 pb-5 mb-4 pe-3" style="color: var(--ming-old-lace); font-size: 180px; transform: translate3d(0,0,0);">
+                <div class="d-flex mb-lg-3" style="padding-left: 160px;">
+                  <div data-aos="flip-right" data-aos-duration="700" data-aos-offset="400" data-aos-delay="150">T</div>
+                  <div data-aos="flip-right" data-aos-duration="700" data-aos-offset="400" data-aos-delay="200">a</div>
+                  <div data-aos="flip-right" data-aos-duration="700" data-aos-offset="400" data-aos-delay="250">b</div>
+                  <div data-aos="flip-right" data-aos-duration="700" data-aos-offset="400" data-aos-delay="300">l</div>
+                  <div data-aos="flip-right" data-aos-duration="700" data-aos-offset="400" data-aos-delay="350">e</div>
+                  <div data-aos="flip-right" data-aos-duration="700" data-aos-offset="400" data-aos-delay="350">'</div>
+                  <div data-aos="flip-right" data-aos-duration="700" data-aos-offset="400" data-aos-delay="400">s</div>
+                </div>
+                <div class="d-flex">
+                  <div data-aos="flip-right" data-aos-duration="700" data-aos-offset="300" data-aos-delay="150">S</div>
+                  <div data-aos="flip-right" data-aos-duration="700" data-aos-offset="300" data-aos-delay="200">h</div>
+                  <div data-aos="flip-right" data-aos-duration="700" data-aos-offset="300" data-aos-delay="250">o</div>
+                  <div data-aos="flip-right" data-aos-duration="700" data-aos-offset="300" data-aos-delay="300">w</div>
+                </div>
+              </div>
+              <div class="position-sticky z-3 top-0" style="padding-top: 115px;">
+                <!--
+                <div class="px-5 px-md-0 ps-xl-5 ms-lg-3">
+                  <img class="d-block mx-auto mx-md-0" src="assets/img/landing/product-ming/PDP-TableKnivesMorel-1.webp" width="860" alt="Headphones">
+                </div>
+                -->
+                <div class="tab-content">
+                  <div class="tab-pane show active" id="color1" role="tabpanel">
+                    <img class="d-block mx-auto mx-md-0" src="assets/img/landing/product-ming/PDP-TableKnivesMorel-1.webp" width="860" alt="Gray">
+                  </div>
+                  <div class="tab-pane" id="color2" role="tabpanel">
+                    <img class="d-block mx-auto mx-md-0" src="assets/img/landing/product-ming/PDP-TableKnivesMorel-2.webp" width="860" alt="Blue">
+                  </div>
+                  <div class="tab-pane" id="color3" role="tabpanel">
+                    <img class="d-block mx-auto mx-md-0" src="assets/img/landing/product-ming/PDP-TableKnivesMorel-3.webp" width="860" alt="Green">
+                  </div>
+                  <div class="tab-pane" id="color4" role="tabpanel">
+                    <img class="d-block mx-auto mx-md-0" src="assets/img/landing/product-ming/PDP-TableKnivesMorel-4.webp" width="860" alt="Pink">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Text -->
+            <div class="col-md-7 col-lg-6 col-xxl-5 order-md-1 position-relative z-3 text-center text-md-start pb-sm-3 pb-md-5 pt-4 mb-md-5 mt-2">
+              <h1 class="text-uppercase mb-sm-4">
+                <span class="display-7 fw-medium text-primary-emphasis">Icône 系列</span>
+                <br>
+                <span class="display-1 fw-bold" style="color: var(--ming-yellow);" >The Table Knives</span> 
+                <!-- <span class="text-info fw-bold">The Table Knives</span> -->
+                <!-- <img class="d-none d-xl-inline-block align-middle ms-3" src="assets/img/landing/product/soundwave.svg" width="200" alt="Sound wave"> -->
+              </h1>
+              <div class="mx-auto mx-md-0" style="max-width: 400px;">
+                <p class="pb-2 pb-lg-0 mb-4 mb-lg-5">原創且暢銷的Icône 系列憑藉其時尚的造型和略帶復古氣息的多種顏色，您一定會發現這款餐具套裝非常適合您的餐桌。</p>
+
+                <!-- radio 上的描述文字 -->
+                <!-- <div class="h6 fs-sm text-center pb-2 mb-1" id="colorOption">Green day</div> -->
+                
+                <div class="h6 text-center" id="colorOption"  >
+                  Color:
+                  <span class="text-body-secondary fw-normal ms-1" id="colorOption">
+                    Morel 原木色
+                  </span>
+                </div>
+                <div class="nav nav-tabs justify-content-center">
+                  <div class="nav-link border-0 p-0 me-2 active" data-bs-toggle="tab" data-bs-target="#color1">
+                    <input class="btn-check" type="radio" name="color" data-binded-label="colorOption" value="Morel 原木色" id="no01-color">
+                    <label class="btn btn-icon btn-xl btn-outline-secondary rounded-circle" for="no01-color" style="width: 2.5rem; height: 2.5rem;">
+                      <span class="d-block rounded-circle" style="width: 1.5rem; height: 1.5rem; background-color: #d9c9a1;"></span>
+                    </label>
+                  </div>
+                  <div class="nav-link border-0 p-0 me-2" data-bs-toggle="tab" data-bs-target="#color2">
+                    <input class="btn-check" type="radio" name="color" data-binded-label="colorOption" value="Persimmon 柿子色" id="no02-color">
+                    <label class="btn btn-icon btn-xl btn-outline-secondary rounded-circle" for="no02-color" style="width: 2.5rem; height: 2.5rem;">
+                      <span class="d-block rounded-circle" style="width: 1.5rem; height: 1.5rem; background-color: #F4A460;"></span>
+                    </label>
+                  </div>
+                  <div class="nav-link border-0 p-0 me-2" data-bs-toggle="tab" data-bs-target="#color3">
+                    <input class="btn-check" type="radio" name="color" data-binded-label="colorOption" value="Glazed 白釉色" checked id="no03-color">
+                    <label class="btn btn-icon btn-xl btn-outline-secondary rounded-circle" for="no03-color" style="width: 2.5rem; height: 2.5rem;">
+                      <span class="d-block rounded-circle" style="width: 1.5rem; height: 1.5rem; background-color: #E6E6FA;"></span>
+                    </label>
+                  </div>
+                  <div class="nav-link border-0 p-0 me-2" data-bs-toggle="tab" data-bs-target="#color4">
+                    <input class="btn-check" type="radio" name="color" data-binded-label="colorOption" value="Willow 綜合款式" id="no04-color">
+                    <label class="btn btn-icon btn-xl btn-outline-secondary rounded-circle" for="no04-color" style="width: 2.5rem; height: 2.5rem;">
+                      <span class="d-block rounded-circle" style="width: 1.5rem; height: 1.5rem; background-color: #DA70D6;"></span>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- <a class="btn btn-outline-dark" href="#">與我們聯繫</a> -->
+                <div class="d-flex justify-content-center justify-content-md-between pt-2 pt-sm-5 mt-auto">
+                  <div class="px-3">
+                    <div class="h4 mb-1">9"1/4 inch</div>
+                    <div class="fs-sm">尺寸</div>
+                  </div>
+                  <div class="px-3">
+                    <div class="h4 mb-1">0.75 kg</div>
+                    <div class="fs-sm">重量</div>
+                  </div>
+                  <div class="px-3">
+                    <div class="h4 mb-1">不鏽鋼18/10</div>
+                    <div class="fs-sm">材質</div>
+                  </div>
+                </div>
+                <br><br>
+                <div class="d-none d-xxl-block" style="height: 290px;"></div>
+                <div class="d-none d-md-block d-xxl-none" style="height: 240px;"></div>
+                <div class="d-md-none" style="height: 50px;"></div>
+                <div data-aos="fade-up" data-aos-duration="800" data-aos-offset="250" data-disable-parallax-down="md">
+                  <h2 class="h1 pb-sm-2 pb-md-3 text-primary-emphasis">被《紐約時報》評為最佳牛排刀首選</h2>
+                  <p>採用德國不銹鋼製成，並配有我們的霧​​面、防污且稍有抓力的手柄。每組 4 個包括一個楓木支架，可水平放置在抽屜中或垂直放置在檯面上。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--隔板banner01-->
+      <section class="">
+        <!-- Parallax scroll-opacity effect -->
+        <div class="jarallax bg-dark py-5" data-jarallax  data-type="scroll-opacity" data-speed="0.6">
+          <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></span>
+          <div class="jarallax-img" style="background-image: url(assets/img/landing/product-ming/TableKnives-1.webp);"></div>
+          <div class="position-relative text-center z-2 px-3 py-sm-5 my-lg-5">
+            <br>
+            <h2 class="h1 text-white my-5">The Table Knives 介紹</h2>
+            <br>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- CTA -->
+      <section class="container py-sm-2 py-md-3 py-lg-4 py-xl-5 mb-2 mb-sm-3 mb-md-4 mb-xxl-5">
+        <!-- 1 -->
+        <div class="row align-items-center py-5">
+          <div class="col-md-6 col-lg-7 col-xxl-8 order-md-1 pb-4 pb-md-0 mb-2 mb-sm-3 mb-md-0"> <!--order-md-1 圖左-->
+            <div class="position-relative ms-auto" style="max-width: 823px;">
+              <img class="d-block" src="assets/img/landing/product-ming/TableKnives-post-1.webp" alt="Image" data-aos="fade-up" data-aos-duration="600" data-aos-offset="300">
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-5 col-xxl-4 order-md-2"> <!--order-md-2 文右-->
+            <h2 class="h1 pb-md-2 pb-xl-3">舒適的手握</h2>
+            <p class="mb-4">餐刀採用我們標誌性的霧面、防污且稍有抓力的手柄手工製作而成，設計得可以舒適地握在手中。</p>
+            <div class="d-flex pb-2 pb-lg-0 mb-4 mb-lg-5">
+              <div class="me-5">
+                <h3 class="mb-1">60-200 Hz</h3>
+                <p class="fs-sm mb-0">frequency range</p>
+              </div>
+              <div>
+                <h3 class="mb-1">0.75 kg</h3>
+                <p class="fs-sm mb-0">weight, kg</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 2 -->
+        <div class="row align-items-center py-5">
+          <div class="col-md-6 col-lg-7 col-xxl-8 order-md-2 pb-4 pb-md-0 mb-2 mb-sm-3 mb-md-0"> <!--order-md-2 圖右-->
+            <div class="position-relative ms-auto" style="max-width: 823px;">
+              <img class="d-block" src="assets/img/landing/product-ming/TableKnives-post-2.webp" alt="Image" data-aos="fade-up" data-aos-duration="600" data-aos-offset="300">
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-5 col-xxl-4 order-md-1"> <!--order-md-1 文左-->
+            <h2 class="h1 pb-md-2 pb-xl-3">鋒利且光滑</h2>
+            <p class="mb-4">直順的刀片確保每次都能乾淨利落地切割，絕不會讓鈍刀毀掉一頓美餐。與削鉛筆機搭配使用，輕鬆、輕鬆地進行護理。</p>
+            <div class="d-flex pb-2 pb-lg-0 mb-4 mb-lg-5">
+              <div class="me-5">
+                <h3 class="mb-1">60-200 Hz</h3>
+                <p class="fs-sm mb-0">frequency range</p>
+              </div>
+              <div>
+                <h3 class="mb-1">0.75 kg</h3>
+                <p class="fs-sm mb-0">weight, kg</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 3 -->
+        <div class="row align-items-center py-5">
+          <div class="col-md-6 col-lg-7 col-xxl-8 order-md-1 pb-4 pb-md-0 mb-2 mb-sm-3 mb-md-0"> <!--order-md-1 圖左-->
+            <div class="position-relative ms-auto" style="max-width: 823px;">
+              <img class="d-block" src="assets/img/landing/product-ming/TableKnives-post-3.webp" alt="Image" data-aos="fade-up" data-aos-duration="600" data-aos-offset="300">
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-5 col-xxl-4 order-md-2"> <!--order-md-2 文右-->
+            <h2 class="h1 pb-md-2 pb-xl-3">單色 VS 混搭</h2>
+            <p class="mb-4">從我們精美的單色套裝中進行選擇，或選擇混合搭配的多件裝。餐刀是日常餐桌和節日盛宴的美麗補充。</p>
+            <div class="d-flex pb-2 pb-lg-0 mb-4 mb-lg-5">
+              <div class="me-5">
+                <h3 class="mb-1">60-200 Hz</h3>
+                <p class="fs-sm mb-0">frequency range</p>
+              </div>
+              <div>
+                <h3 class="mb-1">0.75 kg</h3>
+                <p class="fs-sm mb-0">weight, kg</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 4 -->
+        <div class="row align-items-center py-5">
+          <div class="col-md-6 col-lg-7 col-xxl-8 order-md-2 pb-4 pb-md-0 mb-2 mb-sm-3 mb-md-0"> <!--order-md-2 圖右-->
+            <div class="position-relative ms-auto" style="max-width: 823px;">
+              <img class="d-block" src="assets/img/landing/product-ming/TableKnives-post-4.webp" alt="Image" data-aos="fade-up" data-aos-duration="600" data-aos-offset="300">
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-5 col-xxl-4 order-md-1"> <!--order-md-1 文左-->
+            <h2 class="h1 pb-md-2 pb-xl-3">清潔不費事</h2>
+            <p class="mb-4">清潔工作輕而易舉，因為刀具可用洗碗機清洗。</p>
+            <div class="d-flex pb-2 pb-lg-0 mb-4 mb-lg-5">
+              <div class="me-5">
+                <h3 class="mb-1">60-200 Hz</h3>
+                <p class="fs-sm mb-0">frequency range</p>
+              </div>
+              <div>
+                <h3 class="mb-1">0.75 kg</h3>
+                <p class="fs-sm mb-0">weight, kg</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 5 -->
+        <div class="row align-items-center py-5">
+          <div class="col-md-6 col-lg-7 col-xxl-8 order-md-1 pb-4 pb-md-0 mb-2 mb-sm-3 mb-md-0"> <!--order-md-1 圖左-->
+            <div class="position-relative ms-auto" style="max-width: 823px;">
+              <img class="d-block" src="assets/img/landing/product-ming/TableKnives-post-5.webp" alt="Image" data-aos="fade-up" data-aos-duration="600" data-aos-offset="300">
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-5 col-xxl-4 order-md-2"> <!--order-md-2 文右-->
+            <h2 class="h1 pb-md-2 pb-xl-3">聰明的收納設計</h2>
+            <p class="mb-4">需要存放時，將它們水平放在抽屜中，或使用隨附的楓木支架垂直放在檯面上，這樣可以保持刀片鋒利並確保手指安全。</p>
+            <div class="d-flex pb-2 pb-lg-0 mb-4 mb-lg-5">
+              <div class="me-5">
+                <h3 class="mb-1">60-200 Hz</h3>
+                <p class="fs-sm mb-0">frequency range</p>
+              </div>
+              <div>
+                <h3 class="mb-1">0.75 kg</h3>
+                <p class="fs-sm mb-0">weight, kg</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Video gallery -->
+      <div class="gallery" data-video="true">
+        <a href="https://youtu.be/T_R9AcOcq84?si=-sBTbwcLVizIlvqs" class="gallery-item d-block card-hover">
+          <div class="btn btn-icon btn-xl btn-warning rounded-circle pe-none position-absolute top-50 start-50 translate-middle z-3">
+            <i class="ai-play-filled"></i>
+          </div>
+          <div class="d-flex justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100 rounded-4 overflow-hidden z-2 opacity-0">
+            <div class="position-absolute start-0 w-100 h-75 text-center text-white fs-sm fw-medium z-2 pb-3">
+              <h1 class="h1 text-white">The Table Knives 繽紛的選擇</h1>
+            </div>
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-40"></div>
+          </div>
+          <img src="assets/img/landing/product-ming/DSC08929.jpg" class="d-block" alt="Video caption">
+        </a>
+      </div>
+    </main>
+
+     <!-- Footer -->
+     <footer class="footer bg-dark position-relative py-4 py-md-5">
+      <div class="d-none d-dark-mode-block position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(255,255,255, .03);"></div>
+      <div class="container position-relative z-2 pt-4 pt-md-2 pt-xl-4 pt-xxl-5" data-bs-theme="dark">
+        <div class="row py-md-3 mb-4 mb-md-5">
+          <div class="col-md-7 col-lg-6 col-xxl-5 mb-sm-4 mb-md-0">
+            <h2 class="display-4 mb-4 mb-md-5">Table's Shows</h2>
+            <div class="d-sm-flex align-items-center">
+              <a class="btn btn-lg btn-warning rounded-0 me-sm-3 me-lg-4" href="#">與我們聯繫</a>
+              <p class="text-body fs-sm py-3 py-sm-0 ps-sm-2 mb-0">為各地的酒店和餐廳提供了發揮創意並輕鬆混合和搭配食物、氛圍和展示的機會。</p>
+            </div>
+          </div>
+          <div class="col-md-5 offset-lg-1 offset-xxl-2 d-flex flex-column">
+            <div class="nav mx-n2 mx-lg-n4 mb-2 mb-sm-3">
+              <a class="nav-link text-warning px-2 px-lg-4" href="mailto:example@email.com">example@email.com</a>
+              <a class="nav-link px-3 px-lg-4" href="#">Privay policy</a>
+            </div>
+            <div class="nav flex-column mb-3 mb-sm-4">
+              <a class="nav-link py-1 px-0" href="tel:+15262200444">+&nbsp;886&nbsp;2&nbsp;885&nbsp;5566</a>
+              <a class="nav-link py-1 px-0" href="tel:+15262200000">+&nbsp;886&nbsp;928&nbsp;123&nbsp;456</a>
+            </div>
+            <div class="nav mx-n2 mt-auto">
+              <a class="nav-link py-1 px-2 me-2" href="#">instagram</a>
+              <a class="nav-link py-1 px-2 me-2" href="#">behance</a>
+              <a class="nav-link py-1 px-2 me-2" href="#">medium</a>
+              <a class="nav-link py-1 px-2" href="#">dribbble</a>
+            </div>
+          </div>
+        </div>
+        <p class="nav fs-sm pt-3 pb-2 pb-lg-0 mb-0">
+          <span class="text-body-secondary">&copy; All rights reserved. Made by</span>
+          <a class="nav-link fw-normal p-0 ms-1" href="https://createx.studio/" target="_blank" rel="noopener">Table's Shows</a>
+        </p>
+      </div>
+    </footer>
+  
+
+    <!-- Back to top button -->
+    <a class="btn-scroll-top" href="#top" data-scroll aria-label="Scroll back to top">
+      <svg viewBox="0 0 40 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"></circle>
+      </svg>
+      <i class="ai-arrow-up"></i>
+    </a>
+
+
+    <!-- Vendor scripts: JS libraries and plugins -->
+    <script src="assets/vendor/@lottiefiles/lottie-player/dist/lottie-player.js"></script>
+    <script src="assets/vendor/aos/dist/aos.js"></script>
+    <script src="assets/vendor/lightgallery/lightgallery.min.js"></script>
+    <script src="assets/vendor/lightgallery/plugins/video/lg-video.min.js"></script>
+
+    <!--Parallax-->
+    <script src="assets/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="assets/vendor/parallax-js/dist/parallax.min.js"></script>
+
+    <!-- Bootstrap + Theme scripts -->
+    <script src="assets/js/theme.min.js"></script>
+  </body>
+</html>
